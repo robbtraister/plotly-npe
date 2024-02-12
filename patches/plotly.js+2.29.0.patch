@@ -1,0 +1,13 @@
+diff --git a/node_modules/plotly.js/dist/plotly.js b/node_modules/plotly.js/dist/plotly.js
+index 94a2241..3b6c477 100644
+--- a/node_modules/plotly.js/dist/plotly.js
++++ b/node_modules/plotly.js/dist/plotly.js
+@@ -91675,6 +91675,8 @@ function supplyDefaults(traceIn, traceOut, defaultColor, layout) {
+     if (textposition === 'inside' || textposition === 'auto' || Array.isArray(textposition)) {
+       coerce('insidetextorientation');
+     }
++  } else if (textInfo === 'none') {
++    coerce('textposition', 'none');
+   }
+   handleDomainDefaults(traceOut, layout, coerce);
+   var hole = coerce('hole');
